@@ -1,12 +1,33 @@
+<%
+  var pageTitle = (page.title? page.title + ' - ' : '')
+                + config.title
+                + (page.title? '' : ' ' + config.description);
+  var pageUrl = url.replace(/(\/index\.html?$)|(\/$)/, '');
+%>
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
 
   <meta charset="utf-8">
-  <title><%= page.title ? page.title + ' - ' : '' %></title>
+  <title><%= pageTitle %></title>
+
+  <meta name="viewport" content="width=device-width">
+
+  <meta property="og:title" content="<%= pageTitle %>" />
+  <meta property="og:description" content="<%= config.description %>" />
+  <meta property="og:type" content="<%= is_home()? 'website' : 'article' %>" />
+  <meta property="og:url" content="<%= pageUrl %>" />
+  <meta property="og:image" content="<%= theme.og_image_url %>" />
+  <meta property="og:site_name" content="<%= config.title %>" />
+
+  <meta property="fb:app_id" content="<%= theme.facebook_app_id %>" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="<%= theme.twitter_site %>">
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="canonical" href="<%= pageUrl %>">
 
+  <%- partial('_partials/ga') %>
 </head>
 <body>
