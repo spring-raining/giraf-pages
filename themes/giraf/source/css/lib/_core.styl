@@ -1,6 +1,22 @@
 // Core (Main Style)
+body.sm {
+  .not-sm {
+    display: none;
+  }
+}
+body:not(.sm) {
+  .only-sm {
+    display: none;
+  }
+}
+
 .center {
   text-align: center;
+}
+
+.warn {
+  color: $brand;
+  font-weight: 800;
 }
 
 .header {
@@ -49,6 +65,11 @@
 
   .btn-set {
     margin-bottom: 10px;
+    color: $brand;
+
+    a {
+      color: $brand;
+    }
 
     .btn {
       margin-right: 12px;
@@ -89,14 +110,14 @@
     width: 100%;
     height: 10px;
     position: absolute;
-    top: -10px;
+    top: -10px
     background-image: repeating-linear-gradient(
             40deg,
-            #e2c710,
-            #e2c710 10px,
+            $brand,
+            $brand 10px,
             transparent 10px,
             transparent 38px,
-            #e2c710 38px);
+            $brand 38px);
     background-size: 40px 40px;
   }
 

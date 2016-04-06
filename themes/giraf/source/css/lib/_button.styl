@@ -40,10 +40,12 @@
     }
 }
 .btn-large {
-    padding: .7em 2em;
-    font-size: 120%;
-    box-sizing: border-box;
-    border-width: 2px;
+    @media $mq-not-xs {
+        padding: .7em 2em;
+        font-size: 120%;
+        box-sizing: border-box;
+        border-width: 2px;
+    }
 }
 .btn-brand {
     color: $brand;
