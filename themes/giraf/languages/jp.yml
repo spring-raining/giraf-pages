@@ -1,0 +1,7 @@
+index:
+  launch_web_app: Web版を起動
+  download_desktop_app: デスクトップ版をダウンロード
+  requires_latest_chrome: '<a href="https://www.google.com/chrome/">最新版のChrome</a>が必要です'
+  desktop_only: >
+    Girafはモバイル機器には対応していません。
+    またPCでチェックしてください！

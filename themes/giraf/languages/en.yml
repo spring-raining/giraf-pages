@@ -1,0 +1,7 @@
+index:
+  launch_web_app: Launch Web App
+  download_desktop_app: Download Desktop App
+  requires_latest_chrome: 'Requires <a href="https://www.google.com/chrome/">Latest Chrome</a>'
+  desktop_only: >
+    Sorry, Giraf isn't working on mobile devices.
+    Check back on your desktop computer!

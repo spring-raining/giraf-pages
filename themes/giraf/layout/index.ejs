@@ -3,23 +3,30 @@
     <div class="l-container">
       <div class="l-row">
         <div class="l-span3">
-          <img src="images/brand.png" alt="Giraf" class="brand">
+          <img src="<%= config.root %>images/brand.png" alt="Giraf" class="brand">
         </div>
         <div class="l-span9">
-          <h2 class="lead">Powerful & Free GIF Creator</h2>
+          <h2 class="lead"><%= page.subtitle %></h2>
           <div class="only-sm warn">
-            Sorry, Giraf isn't working on mobile devices.
-            Check back on your desktop computer!
+            <%= __('index.desktop_only') %>
           </div>
           <div class="btn-set">
-            <a href="http://giraf.harusamex.com"><button class="btn btn-large btn-brand">Launch Web App</button></a>
+            <a href="http://giraf.harusamex.com"><button class="btn btn-large btn-brand">
+              <%= __('index.launch_web_app') %>
+            </button></a>
             <span class="not-sm">
-              Reqires <a href="https://www.google.com/chrome/">Latest Chrome</a>
+              <%- __('index.requires_latest_chrome') %>
             </span>
           </div>
           <div class="btn-set">
-            <button class="btn btn-large btn-brand">Download Desktop App</button>
-          <div>
+            <button class="btn btn-large btn-brand">
+              <%= __('index.download_desktop_app') %>
+            </button>
+          </div>
+          <div class="languages">
+            <a href="<%= config.root %>">English</a>
+            <a href="<%= config.root %>jp">日本語</a>
+          </div>
         </div>
       </div>
     </div>
@@ -30,30 +37,10 @@
   <div class="l-container">
     <div class="l-row">
       <div class="l-span7">
-        <p>
-          <h2 class="lead">Compound Your Favorite Videos, GIFs and Images</h2>
-          <div>
-            Giraf can import mp4 videos and gif/png/jpeg images.</br>
-            If once you import footages from local, you can compound them freely.
-          </div>
-        </p>
-        <p>
-          <h2 class="lead">Timeline-base Editor</h2>
-          <div>
-            Giraf has the timeline editor in the lower left pane.</br>
-            Each layers are moved by dragging them independently.
-          </div>
-        </p>
-        <p>
-          <h2 class="lead">Scripting GIFs</h2>
-          <div>
-            If you are informed about JavaScript,</br>
-            you can control appearances of GIFs by editing scrirpt.
-          </div>
-        </p>
+        <%- page.content %>
       </div>
       <div class="l-span5 center">
-        <img src="images/feat_1.gif" class="feat-1">
+        <img src="<%= config.root %>images/feat_1.gif" class="feat-1">
       </div>
     </div>
   </div>
