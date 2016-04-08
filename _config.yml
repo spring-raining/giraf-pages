@@ -70,7 +70,7 @@ theme: giraf
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:spring-raining/giraf-pages.git
+  repo: git@github.com:spring-raining/giraf.git
   branch: gh-pages
   message: "gh-pages updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
